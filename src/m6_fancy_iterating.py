@@ -443,7 +443,7 @@ def print_items_in_second_half(sequence):
       100
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # IMPORTANT: Don't get hung up on dealing with the middle item
@@ -453,16 +453,15 @@ def print_items_in_second_half(sequence):
     # IMPORTANT: RANGE expressions need INTEGERS.
     #   Use   //   for integer division.
     # -------------------------------------------------------------------------
-    #for k in range(len(sequence)):
-        #len2 = len(sequence)//2
-        #if len2 % 2 == 0:
-        #    print(len2)
-
+    for k in range(len(sequence)//2, len(sequence), 1):
+        print(sequence[k])
 
 ###############################################################################
 # Iterating through a sequence, selecting items:
 #   -- in this sample problem, the items that are bigger than 5.
 ###############################################################################
+
+
 def print_items_that_are_bigger_than_5(sequence):
     """
     Prints the items in the given sequence that are bigger than 5,
@@ -490,6 +489,8 @@ def print_items_that_are_bigger_than_5(sequence):
 # Iterating through a sequence, selecting items:
 #   -- in this sample problem, the items that are strings.
 ###############################################################################
+
+
 def print_items_that_are_strings(sequence):
     """
     Prints the items in the given sequence that are strings,
@@ -503,11 +504,10 @@ def print_items_that_are_strings(sequence):
       bone is at index 4
     """
     for k in range(len(sequence)):
-        if sequence[k] is str():
+        if type(sequence[k]) is str:
             print(sequence[k], 'is at index', k)
-
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     # IMPORTANT:
     #   -- A string is, by definition, an object whose type is   str.
@@ -539,16 +539,14 @@ def print_items_that_are_odd_integers(sequence):
     """
 
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #
     # IMPORTANT:  The  type  function returns  int  if its argument
     #   is an integer.  Note that   int   has NO quotes surrounding it.
     # -------------------------------------------------------------------------
-   # for k in range(len(sequence)):
-    #    if sequence[k] == str():
-    #        return None
-    #    if sequence[k] % 2 == 1:
-    #        print(sequence[k], 'is at index', k)
+    for k in range(len(sequence)):
+        if (type(sequence[k]) is int) and (sequence[k] % 2 == 1):
+            print(sequence[k], 'is at index', k)
 #
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
